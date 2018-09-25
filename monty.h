@@ -6,6 +6,7 @@
 #include <stddef.h>
 #include <string.h>
 #include <math.h>
+#include <iostream.h>
 
 /**
 * struct stack_s - doubly linked list representation of a stack (or queue)
