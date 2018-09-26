@@ -52,10 +52,10 @@ typedef struct instruction_s
 */
 typedef struct global
 {
-	char *gString;
+	/*###	char *gString; */
 	char *argument;
 	int dataType;
-	FILE *file;
+	/* ### FILE *file; */
 } pitbull;
 
 extern pitbull world;
