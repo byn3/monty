@@ -23,11 +23,11 @@ int main(int argc, char **argv)
 	file = fopen(argv[1], "r"); /* open file and read */
 	if (!file)
 		fileReadError(argv[1]); /* call helper func */
-	world.file = file; /* store the file in a global file type */
+	/* ### world.file = file;*/ /* store the file in a global file type */
 	world.dataType = 1; /* we dealing with stacks if 1, queues if 0 */
 	while (getline(&buffer, &bufLen, file) != -1)
 	{
-		world.gString = buffer; /* store the buffer in a global string */
+		/* ### world.gString = buffer; */ /* store the buffer in a global string */
 		if (*buffer == '\n') /* go get next line and increase count */
 		{
 			lineCount++;
