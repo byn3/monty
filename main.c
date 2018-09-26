@@ -13,43 +13,37 @@ int main(int argc, char **argv)
 {
 	unsigned int lineCount = 1; /* line count. starts at 1 */
 	size_t bufLen = 0; /* buffer count, starts at 0 */
-	char *string; /* string placeholder. used for arguments */
-	char *buffer; /* each line from the file will be stored here */
+	char *string = NULL; /* string placeholder. used for arguments */
+	char *buffer = NULL; /* each line from the file will be stored here */
+	stack_t *stack = NULL; /* the stack data structure */
 	FILE *file; /* the file we will read */
-	stack_t stack /* the stack data structure */
 
 	if (argc != 2)
-	{
-		printf("USAGE: monty file");
-		exit(EXIT_FAILURE);
-	}
-	file = fopen(argv[1], 'r');
+		usageError(); /* call helper func */
+	file = fopen(argv[1], "r"); /* open file and read */
 	if (!file)
+		fileReadError(argv[1]); /* call helper func */
+	world.file = file; /* store the file in a global file type */
+	world.dataType = 1; /* we dealing with stacks if 1, queues if 0 */
+	while (getline(&buffer, &bufLen, file) != -1)
 	{
-		printf("Error: Can't open file %s\n", argv[1]);
-		exit(EXIT_FAILURE);
+		world.gString = buffer; /* store the buffer in a global string */
+		if (*buffer == '\n') /* go get next line and increase count */
+		{
+			lineCount++;
+			continue;
+		}
+		string = strtok(buffer, " \t\n"); /* tokenize the string */
+		if (!string)
+		{
+			lineCount++;
+			continue;
+		}
+		world.argument = strtok(NULL, " \t\n"); /* store next string token */
+		opcode(&stack, string, lineCount); /* run the function */
+		lineCount++;
 	}
-	
-while get line
-str tok tonenize
-count plus
-f close
-free buf
-free string token
-
-/*
-	if file has invalid instruction then error
-		unknown instruction.
-			line numbers
-			error codes.
-*/
-
-/*
-	while file
-		then execute every line until problem or end.
-
-*/
-
-
-	exit(EXIT_SUCCESS)
+	/* everything was successfull and we exit nicely */
+	freeAll(&stack);
+	exit(EXIT_SUCCESS);
 }
