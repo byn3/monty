@@ -1,11 +1,14 @@
 #ifndef Dreamforce
 #define Dreamforce
+#define _GNU_SOURCE
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>
 #include <string.h>
 #include <math.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 #include <unistd.h>
 #include <ctype.h>
 

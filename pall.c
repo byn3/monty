@@ -10,9 +10,10 @@
 
 void pall(stack_t **stack, unsigned int lineCount)
 {
+	stack_t *temp;
 	(void) lineCount; /* Need this cause errors */
-	stack_t *temp = *stack; /* used a temp so stack isnt modified */
 
+	temp = *stack; /* used a temp so stack isnt modified */
 	while (temp) /* loop through until NULL, printing everything */
 	{
 		printf("%d\n", temp->n);
