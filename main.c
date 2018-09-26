@@ -1,6 +1,5 @@
 #include "monty.h"
 
-pitbull world;
 /**
 * main - does a lot of stuff. calls on my helper functions to print output.
 * @argc: number of arguments
@@ -9,7 +8,6 @@ pitbull world;
 * Description: This is used to practice stacks and queues
 * Return: success or error codes
 */
-
 int main(int argc, char **argv)
 {
 /*	pitbull world; */ /* the global variable MISTA WORLD WIDE */

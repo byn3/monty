@@ -59,6 +59,7 @@ typedef struct global
 } pitbull;
 
 extern pitbull world;
+pitbull world;
 
 void add(stack_t **stack, unsigned int lineCount);
 void freeAll(stack_t **h);
