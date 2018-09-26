@@ -13,10 +13,11 @@ void freeAll(stack_t **h)
 
 	if (!h) /* head is empty. nothing to free */
 		return;
-	free(world.gString); /* free the string in the global struct var */
-	fclose(world.file); /* close the file in global struct variable */
+	/* free(world.gString);*/ /* free the string in the global struct var */
+	/* fclose(world.file);*/  /* close the file in global struct variable */
 	while (*h) /* free so much head. soooo goood */
 	{
+
 		temp = (*h)->next;
 		free(*h);
 		*h = temp;
