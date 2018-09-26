@@ -11,6 +11,7 @@
 
 int main(int argc, char **argv)
 {
+	pitbull world; /* the global variable MISTA WORLD WIDE */
 	unsigned int lineCount = 1; /* line count. starts at 1 */
 	size_t bufLen = 0; /* buffer count, starts at 0 */
 	char *string = NULL; /* string placeholder. used for arguments */
@@ -45,5 +46,7 @@ int main(int argc, char **argv)
 	}
 	/* everything was successfull and we exit nicely */
 	freeAll(&stack);
+	free(buffer);
+	fclose(file);
 	exit(EXIT_SUCCESS);
 }
