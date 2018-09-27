@@ -34,7 +34,7 @@ void opcode(stack_t **stack, char *string, unsigned int lineCount)
 		world.dataType = 0;
 		return;
 	}
-	if (string == '#')
+	if (*string == '#')
 		return;
 	while (op[i].opcode)
 	{
