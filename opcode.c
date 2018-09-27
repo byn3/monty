@@ -23,7 +23,7 @@ void opcode(stack_t **stack, char *string, unsigned int lineCount)
 		{"nop", nop},
 		{NULL, NULL}
 	}; /* the opcodes we want to compare via string */
-	
+
 	if (!strcmp(string, "stack"))
 	{
 		world.dataType = 1;
