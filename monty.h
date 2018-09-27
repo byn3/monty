@@ -66,6 +66,7 @@ pitbull world;
 
 void add(stack_t **stack, unsigned int lineCount);
 void _div(stack_t **stack, unsigned int lineCount);
+void _mod(stack_t **stack, unsigned int lineCount);
 void freeAll(stack_t **h);
 int isDigglet(char *string);
 void lineUp(stack_t **stack, stack_t *temp);
