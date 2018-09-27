@@ -44,8 +44,7 @@ int main(int argc, char **argv)
 		lineCount++;
 	}
 	/* everything was successfull and we exit nicely */
-	if (stack)
-		freeAll(&stack);
+	freeAll(&stack);
 	free(buffer);
 	fclose(file);
 	exit(EXIT_SUCCESS);
