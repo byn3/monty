@@ -16,7 +16,7 @@ void _mod(stack_t **stack, unsigned int lineCount)
 	{
 		/* i should prob make a print error helper file 2.0 by now */
 		freeAll(stack);
-		fprintf(stderr, "L%d: can't div, stack too short\n", lineCount);
+		fprintf(stderr, "L%d: can't mod, stack too short\n", lineCount);
 		exit(EXIT_FAILURE);
 	}
 	if ((*stack)->n == 0)
