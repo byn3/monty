@@ -16,7 +16,7 @@ void add(stack_t **stack, unsigned int lineCount)
 	{
 		/* i should prob make a print error helper file 2.0 by now */
 		freeAll(stack);
-		printf("L%d: can't add, stack too short\n", lineCount);
+		fprintf(stderr, "L%d: can't add, stack too short\n", lineCount);
 		exit(EXIT_FAILURE);
 	}
 	/* so we combine the first 2 n values into sum */

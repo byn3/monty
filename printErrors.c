@@ -7,7 +7,7 @@
 */
 void usageError(void)
 {
-	printf("USAGE: monty file");
+	fprintf(stderr, "USAGE: monty file\n");
 	exit(EXIT_FAILURE);
 }
 
@@ -20,7 +20,7 @@ void usageError(void)
 */
 void fileReadError(char *argv)
 {
-	printf("Error: Can't open file %s\n", argv);
+	fprintf(stderr, "Error: Can't open file %s\n", argv);
 	exit(EXIT_FAILURE);
 }
 
@@ -35,7 +35,7 @@ void fileReadError(char *argv)
 */
 void badOpCode(stack_t **stack, char *string, unsigned int lineCount)
 {
-	printf("L%u: unknown instruction %s", lineCount, string);
+	fprintf(stderr, "L%u: unknown instruction %s\n", lineCount, string);
 	freeAll(stack); /* need to free later cause string above */
 	exit(EXIT_FAILURE);
 }
@@ -50,7 +50,7 @@ void badOpCode(stack_t **stack, char *string, unsigned int lineCount)
 void mallocError(stack_t **stack)
 {
 	freeAll(stack);
-	printf("Error: malloc failed");
+	fprintf(stderr, "Error: malloc failed\n");
 	exit(EXIT_FAILURE);
 }
 
@@ -66,6 +66,6 @@ void mallocError(stack_t **stack)
 void integerError(stack_t **stack, int lineCount)
 {
 	freeAll(stack);
-	printf("L%u: usage: push integer\n", lineCount);
+	fprintf(stderr, "L%u: usage: push integer\n", lineCount);
 	exit(EXIT_FAILURE);
 }

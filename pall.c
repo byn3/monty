@@ -16,7 +16,7 @@ void pall(stack_t **stack, unsigned int lineCount)
 	temp = *stack; /* used a temp so stack isnt modified */
 	while (temp) /* loop through until NULL, printing everything */
 	{
-		printf("%d\n", temp->n);
+		fprintf(stdout, "%d\n", temp->n);
 		temp = temp->next;
 	}
 }

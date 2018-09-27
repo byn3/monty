@@ -23,7 +23,19 @@ void opcode(stack_t **stack, char *string, unsigned int lineCount)
 		{"nop", nop},
 		{NULL, NULL}
 	}; /* the opcodes we want to compare via string */
-
+	
+	if (!strcmp(string, "stack"))
+	{
+		world.dataType = 1;
+		return;
+	}
+	if (!strcmp(string, "queue"))
+	{
+		world.dataType = 0;
+		return;
+	}
+	if (string == '#')
+		return;
 	while (op[i].opcode)
 	{
 		if (strcmp(op[i].opcode, string) == 0)

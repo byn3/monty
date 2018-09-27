@@ -13,8 +13,8 @@ void pint(stack_t **stack, unsigned int lineCount)
 	{
 		/* this is not in the oprint error helper funcs file */
 		/* cause betty wont allow more than 5 functions =( */
-		printf("L%d: can't pint, stack empty\n", lineCount);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", lineCount);
 		exit(EXIT_FAILURE);
 	}
-	printf("%d\n", (*stack)->n);
+	fprintf(stdout, "%d\n", (*stack)->n);
 }

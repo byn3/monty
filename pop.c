@@ -15,7 +15,7 @@ void pop(stack_t **stack, unsigned int lineCount)
 	{
 		/* again, cant add to helper functions cause reached 5 limit */
 		freeAll(stack);
-		printf("L%u: can't pop an empty stack\n", lineCount);
+		fprintf(stderr, "L%u: can't pop an empty stack\n", lineCount);
 		exit(EXIT_FAILURE);
 	}
 

@@ -14,7 +14,7 @@ void swap(stack_t **stack, unsigned int lineCount)
 	{
 		/* yea def should have made another print error file */
 		freeAll(stack);
-		printf("L%d: can't swap, stack too short\n", lineCount);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", lineCount);
 		exit(EXIT_FAILURE);
 	}
 	temp = *stack;
