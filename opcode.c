@@ -22,6 +22,8 @@ void opcode(stack_t **stack, char *string, unsigned int lineCount)
 		{"add", add},
 		{"nop", nop},
 		{"sub", sub},
+		{"div", _div},
+		{"mul", _mul},
 		{NULL, NULL}
 	}; /* the opcodes we want to compare via string */
 

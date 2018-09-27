@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
-* div - subtracts the first 2 elements
+* _div - subtracts the first 2 elements
 * @stack: i cant come up with any more stack puns. stack of wack
 * @lineCount: line # for the errors
 *
@@ -22,7 +22,7 @@ void _div(stack_t **stack, unsigned int lineCount)
 	if ((*stack)->n == 0)
 	{
 		freeAll(stack);
-        fprintf(stderr, "L%d: division by zero\n", lineCount);
+		fprintf(stderr, "L%d: division by zero\n", lineCount);
 		exit(EXIT_FAILURE);
 	}
 	/* so we combine the first 2 n values into sum */
