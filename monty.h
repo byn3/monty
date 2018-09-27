@@ -80,6 +80,7 @@ void mallocError(stack_t **stack);
 void integerError(stack_t **stack, int lineCount);
 void push(stack_t **stack, unsigned int lineCount);
 void stackIt(stack_t **stack, stack_t *temp);
+void sub(stack_t **stack, unsigned int lineCount);
 void swap(stack_t **stack, unsigned int lineCount);
 
 
