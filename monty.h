@@ -45,22 +45,17 @@ typedef struct instruction_s
 
 /**
 * struct global - the string, the arguments, the dataType, the file
-* @string: the string from the buffer
 * @argument: the arguments of the string
 * @dataType: will be used to differentiate stacks from queues
-* @file: the file we opened
 *
 * Description: global structure used to pass data around the functions easily
 * for stack, queues, LIFO, FIFO Holberton project
 */
 typedef struct global
 {
-	/*###	char *gString; */
 	char *argument;
 	int dataType;
-	/* ### FILE *file; */
 } pitbull;
-
 extern pitbull world;
 pitbull world;
 
