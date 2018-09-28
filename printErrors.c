@@ -35,7 +35,9 @@ void fileReadError(char *argv)
 */
 void badOpCode(stack_t **stack, char *string, unsigned int lineCount)
 {
-	fprintf(stderr, "L%u: unknown instruction %s\n", lineCount, string);
+	fprintf(stderr, "L%u: unknown instruction %s\n", lineCount, string)
+/*	fclose(file); i have lots of MEMORY LEAKS I CAN FIX THIS IF I WANT TO */
+/*	free(gString);*/
 	freeAll(stack); /* need to free later cause string above */
 	exit(EXIT_FAILURE);
 }
