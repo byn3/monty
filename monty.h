@@ -85,6 +85,9 @@ void stackIt(stack_t **stack, stack_t *temp);
 void sub(stack_t **stack, unsigned int lineCount);
 void _mul(stack_t **stack, unsigned int lineCount);
 void swap(stack_t **stack, unsigned int lineCount);
-
+void pchar(stack_t **stack, unsigned int lineCount);
+void pstr(stack_t **stack, unsigned int lineCount);
+void rotl(stack_t **stack, unsigned int lineCount);
+void rotr(stack_t **stack, unsigned int lineCount);
 
 #endif
