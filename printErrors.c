@@ -60,7 +60,7 @@ void mallocError(stack_t **stack)
 * @stack: the stack
 * @lineCount: used for debugging
 *
-* Rturn: none it is void
+* Return: none it is void
 */
 
 void integerError(stack_t **stack, int lineCount)
